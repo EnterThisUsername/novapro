@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop - NØVA•PRØ</title>
+    <title>Shop - Nova Pro</title>
     <link rel="stylesheet" href="shop.css">
 </head>
 <body>
     <nav>
-        <div class="logo">NØVA•PRØ</div>
+        <div class="logo">NOVA PRO</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="contact.html">Contact</a>
+            <button class="cart-btn" id="cartBtn">
+                🛒 Cart (<span id="cartCount">0</span>)
+            </button>
         </div>
     </nav>
 
@@ -33,6 +36,43 @@
             <!-- Products are added via JavaScript -->
         </div>
     </main>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <h3>Total: $<span id="totalPrice">0</span></h3>
+            </div>
+            <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-checkout">&times;</span>
+            <h2>Checkout</h2>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label>Your Name:</label>
+                    <input type="text" id="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label>When will you bring the physical cash?</label>
+                    <input type="date" id="cashDate" required>
+                </div>
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkoutItems"></div>
+                    <h3>Total: $<span id="checkoutTotal">0</span></h3>
+                </div>
+                <button type="submit" class="submit-btn">Confirm Order</button>
+            </form>
+        </div>
+    </div>
 
     <script src="shop.js"></script>
 </body>
