@@ -19,7 +19,7 @@ const products = [
 let cart = [];
 
 // Google Sheets Web App URL - REPLACE THIS WITH YOUR WEB APP URL
-const GOOGLE_SHEETS_URL = 'YOUR_GOOGLE_SHEETS_WEB_APP_URL_HERE';
+const GOOGLE_SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxwuulIRV_97CZvVyu6HMGhZ-wp7sT2VNfK1Opp8V15T2xI1PS2m_AD_xlIT2oUomr8/exec';
 
 // Display products on page load
 displayProducts('all');
