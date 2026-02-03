@@ -4,16 +4,7 @@
 // Image path: just provide the filename, it will automatically look in images/ folder
 
 const products = [
-    { name: "Soccer Pro Jersey", price: 35, tag: "soccer", image: "images/soccer-jersey.png" },
-    { name: "Soccer Training Hoodie", price: 45, tag: "soccer", image: "images/soccer-hoodie.png" },
-    { name: "Football Varsity Tee", price: 30, tag: "nfl", image: "images/nfl-tee.png" },
-    { name: "Football Training Hoodie", price: 50, tag: "nfl", image: "nimages/fl-hoodie.png" },
-    { name: "Racing Crew Shirt", price: 32, tag: "f1", image: "images/f1-shirt.png" },
-    { name: "Racing Track Hoodie", price: 48, tag: "f1", image: "images/f1-hoodie.png" },
-    { name: "Basketball Court Jersey", price: 36, tag: "NBA", image: "images/nba-jersey.png" },
-    { name: "Basketball Practice Tee", price: 28, tag: "NBA", image: "images/nba-tee.png" },
-    { name: "Soccer Elite Hoodie", price: 52, tag: "soccer", image: "images/soccer-elite.png" },
-    { name: "Racing Speed Shirt", price: 34, tag: "f1", image: "images/f1-speed.png" },
+    { name: "Test1", price: 35, tag: "F1", image: "images/f1.png" },
 ];
 
 // Shopping cart array
