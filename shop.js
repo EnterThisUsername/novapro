@@ -1,18 +1,19 @@
 // PRODUCTS ARRAY - Easy to modify and add new products
-// Each product needs: name, price, tag
-// Available tags: soccer, football, racing, basketball (add more as needed)
+// Each product needs: name, price, tag, image (optional - if not provided, shows placeholder)
+// Available tags: f1, car, nfl, college, nhl, soccer, NBA (add more as needed)
+// Image path: just provide the filename, it will automatically look in images/ folder
 
 const products = [
-    { name: "Soccer Pro Jersey", price: 35, tag: "soccer" },
-    { name: "Soccer Training Hoodie", price: 45, tag: "soccer" },
-    { name: "Football Varsity Tee", price: 30, tag: "football" },
-    { name: "Football Training Hoodie", price: 50, tag: "football" },
-    { name: "Racing Crew Shirt", price: 32, tag: "racing" },
-    { name: "Racing Track Hoodie", price: 48, tag: "racing" },
-    { name: "Basketball Court Jersey", price: 36, tag: "basketball" },
-    { name: "Basketball Practice Tee", price: 28, tag: "basketball" },
-    { name: "Soccer Elite Hoodie", price: 52, tag: "soccer" },
-    { name: "Racing Speed Shirt", price: 34, tag: "racing" },
+    { name: "Soccer Pro Jersey", price: 35, tag: "soccer", image: "images/soccer-jersey.png" },
+    { name: "Soccer Training Hoodie", price: 45, tag: "soccer", image: "images/soccer-hoodie.png" },
+    { name: "Football Varsity Tee", price: 30, tag: "nfl", image: "images/nfl-tee.png" },
+    { name: "Football Training Hoodie", price: 50, tag: "nfl", image: "nimages/fl-hoodie.png" },
+    { name: "Racing Crew Shirt", price: 32, tag: "f1", image: "images/f1-shirt.png" },
+    { name: "Racing Track Hoodie", price: 48, tag: "f1", image: "images/f1-hoodie.png" },
+    { name: "Basketball Court Jersey", price: 36, tag: "NBA", image: "images/nba-jersey.png" },
+    { name: "Basketball Practice Tee", price: 28, tag: "NBA", image: "images/nba-tee.png" },
+    { name: "Soccer Elite Hoodie", price: 52, tag: "soccer", image: "images/soccer-elite.png" },
+    { name: "Racing Speed Shirt", price: 34, tag: "f1", image: "images/f1-speed.png" },
 ];
 
 // Shopping cart array
@@ -46,8 +47,14 @@ function displayProducts(tag) {
         const card = document.createElement('div');
         card.className = 'product-card';
         card.style.animationDelay = `${index * 0.1}s`;
+        
+        // Create image element with fallback
+        const imageHTML = product.image 
+            ? `<div class="product-image"><img src="images/${product.image}" alt="${product.name}" onerror="this.parentElement.innerHTML='Product Image'"></div>`
+            : `<div class="product-image">Product Image</div>`;
+        
         card.innerHTML = `
-            <div class="product-image">Product Image</div>
+            ${imageHTML}
             <h3 class="product-name">${product.name}</h3>
             <span class="product-tag">${product.tag}</span>
             <p class="product-price">$${product.price}</p>
