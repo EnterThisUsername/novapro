@@ -541,6 +541,28 @@ h1 {
     border-color: #c90000;
 }
 
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    background: #2a2a2a;
+    border: 2px solid #3a3a3a;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #c90000;
+}
+
+.form-group select option {
+    background: #2a2a2a;
+    color: #ffffff;
+}
+
 .order-summary {
     background: #2a2a2a;
     padding: 20px;
