@@ -224,12 +224,14 @@ document.getElementById('checkoutForm').onsubmit = async (e) => {
     
     const customerName = document.getElementById('customerName').value;
     const cashDate = document.getElementById('cashDate').value;
+    const cashPeriod = document.getElementById('cashPeriod').value;
     const total = document.getElementById('checkoutTotal').textContent;
     
     // Prepare order data
     const orderData = {
         name: customerName,
         cashDate: cashDate,
+        cashPeriod: cashPeriod,
         total: total,
         items: cart.map(item => `${item.name} (x${item.quantity})`).join(', '),
         timestamp: new Date().toLocaleString()
@@ -247,7 +249,7 @@ document.getElementById('checkoutForm').onsubmit = async (e) => {
         });
         
         // Success
-        alert(`Order confirmed! Total: $${total}\nPlease bring cash on ${cashDate}\nThank you, ${customerName}!`);
+        alert(`Order confirmed! Total: $${total}\nPlease bring cash on ${cashDate} (${cashPeriod})\nThank you, ${customerName}!`);
         
         // Clear cart
         cart = [];
